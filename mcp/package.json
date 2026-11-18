@@ -1,0 +1,56 @@
+{
+  "name": "@toktokdata/mcp",
+  "version": "0.1.0",
+  "description": "Local MCP server for the toktokdata.live API: TikTok LIVE rankings, creators, sessions and more as read-only tools for Claude, Cursor, VS Code and other MCP clients.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "toktokdata-mcp": "dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "toktokdata",
+    "tiktok",
+    "tiktok-live"
+  ],
+  "homepage": "https://toktokdata.live",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKK-Platform/toktokdata-sdks.git",
+    "directory": "mcp"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@toktokdata/sdk": "^0.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

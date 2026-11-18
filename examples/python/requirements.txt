@@ -1,0 +1,2 @@
+# The SDK source in this repo. Once it is on PyPI, replace this line with: toktokdata>=0.1.0
+-e ../../python

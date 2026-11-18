@@ -1,0 +1,64 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = [ "hatchling>=1.27" ]
+
+[project]
+name = "toktokdata"
+description = "Official Python SDK for the toktokdata.live API (TikTok LIVE rankings, creators, gifters, LIVE sessions, alerts, exports)."
+readme = "README.md"
+keywords = [ "api", "live", "rankings", "sdk", "tiktok", "toktokdata" ]
+license = "MIT"
+license-files = [ "LICENSE" ]
+authors = [ { name = "toktokdata.live" } ]
+requires-python = ">=3.9"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dynamic = [ "version" ]
+dependencies = []
+
+optional-dependencies.dev = [
+  "mypy>=1.11",
+  "pytest>=8",
+  "ruff>=0.6",
+]
+urls.Documentation = "https://toktokdata.live/docs"
+urls.Homepage = "https://toktokdata.live"
+urls.Issues = "https://github.com/MKK-Platform/toktokdata-sdks/issues"
+urls.Source = "https://github.com/MKK-Platform/toktokdata-sdks/tree/main/python"
+
+[tool.hatch.version]
+path = "src/toktokdata/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = [ "src/toktokdata" ]
+
+[tool.hatch.build.targets.sdist]
+include = [ "src", "tests", "README.md", "LICENSE", "pyproject.toml" ]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+src = [ "src", "tests" ]
+
+lint.select = [ "B", "E", "F", "I", "RUF", "SIM", "UP", "W" ]
+
+[tool.pytest.ini_options]
+testpaths = [ "tests" ]
+addopts = "-q"
+
+[tool.mypy]
+strict = true
+files = [ "src" ]

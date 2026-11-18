@@ -1,0 +1,11 @@
+{
+    "name": "toktokdata/examples-php",
+    "description": "toktokdata.live API examples with the plain curl extension",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
+}

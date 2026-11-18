@@ -1,0 +1,23 @@
+{
+  "name": "toktokdata-examples-typescript",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "leaderboard": "tsx leaderboard.ts",
+    "creator-report": "tsx creator-report.ts",
+    "export-csv": "tsx export-csv.ts",
+    "webhook-server": "tsx webhook-server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@toktokdata/sdk": "file:../../js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

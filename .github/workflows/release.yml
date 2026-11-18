@@ -1,0 +1,60 @@
+name: Release
+
+# Publishes one package per tag:
+#   js-v0.1.0      -> npm @toktokdata/sdk     (needs secret NPM_TOKEN)
+#   mcp-v0.1.0     -> npm @toktokdata/mcp     (needs secret NPM_TOKEN)
+#   python-v0.1.0  -> PyPI toktokdata         (PyPI trusted publisher for this workflow)
+#   go/v0.1.0      -> nothing to upload: the Go proxy serves the tag itself
+on:
+  push:
+    tags: ['js-v*', 'mcp-v*', 'python-v*']
+
+permissions:
+  contents: read
+
+jobs:
+  npm:
+    if: startsWith(github.ref_name, 'js-v') || startsWith(github.ref_name, 'mcp-v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm run build --workspaces
+      - run: npm test --workspaces
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [[ "$GITHUB_REF_NAME" == js-v* ]]; then ws=js; else ws=mcp; fi
+          want="${GITHUB_REF_NAME#*-v}"
+          have="$(node -p "require('./$ws/package.json').version")"
+          [[ "$want" == "$have" ]] || { echo "tag $want != $ws/package.json $have"; exit 1; }
+          npm publish --workspace "$ws" --access public --provenance
+
+  pypi:
+    if: startsWith(github.ref_name, 'python-v')
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+    defaults:
+      run:
+        working-directory: python
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install build
+      - run: python -m build
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: python/dist

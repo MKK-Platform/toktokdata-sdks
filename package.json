@@ -1,0 +1,21 @@
+{
+  "name": "toktokdata-sdks",
+  "private": true,
+  "description": "Official SDKs, MCP server and samples for the toktokdata.live API (npm workspaces: js, mcp).",
+  "license": "MIT",
+  "workspaces": [
+    "js",
+    "mcp"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run build -w @toktokdata/sdk && npm test --workspaces",
+    "typecheck": "npm run build -w @toktokdata/sdk && npm run typecheck --workspaces"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "overrides": {
+    "vite": "^6.4.1"
+  }
+}
