@@ -1,11 +1,11 @@
-# @toktokdata/mcp
+# @toktokdata.live/mcp
 
 A local [Model Context Protocol](https://modelcontextprotocol.io) server for the
 [toktokdata.live](https://toktokdata.live) API. It gives Claude, Cursor, VS Code, Windsurf and other
 MCP clients 30 read-only tools: official TikTok LIVE rankings, creator profiles and follow graph,
 recorded LIVE sessions, gifts, gifters, agencies, trends and your credit usage.
 
-It runs on your machine over stdio (`npx -y @toktokdata/mcp`), talks to `https://api.toktokdata.live`
+It runs on your machine over stdio (`npx -y @toktokdata.live/mcp`), talks to `https://api.toktokdata.live`
 with your API key, and never writes anything: no alerts, exports, refreshes or video playback.
 
 ## Setup
@@ -33,7 +33,7 @@ Requires Node.js 20 or newer.
   "mcpServers": {
     "toktokdata": {
       "command": "npx",
-      "args": ["-y", "@toktokdata/mcp"],
+      "args": ["-y", "@toktokdata.live/mcp"],
       "env": { "TOKTOKDATA_API_KEY": "ttk_live_..." }
     }
   }
@@ -43,7 +43,7 @@ Requires Node.js 20 or newer.
 ### Claude Code
 
 ```bash
-claude mcp add toktokdata -e TOKTOKDATA_API_KEY=ttk_live_... -- npx -y @toktokdata/mcp
+claude mcp add toktokdata -e TOKTOKDATA_API_KEY=ttk_live_... -- npx -y @toktokdata.live/mcp
 ```
 
 Add `--scope user` to use it in every project.
@@ -57,7 +57,7 @@ Add `--scope user` to use it in every project.
   "mcpServers": {
     "toktokdata": {
       "command": "npx",
-      "args": ["-y", "@toktokdata/mcp"],
+      "args": ["-y", "@toktokdata.live/mcp"],
       "env": { "TOKTOKDATA_API_KEY": "ttk_live_..." }
     }
   }
@@ -77,7 +77,7 @@ Add `--scope user` to use it in every project.
     "toktokdata": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@toktokdata/mcp"],
+      "args": ["-y", "@toktokdata.live/mcp"],
       "env": { "TOKTOKDATA_API_KEY": "${input:toktokdata-key}" }
     }
   }
@@ -93,14 +93,14 @@ Add `--scope user` to use it in every project.
   "mcpServers": {
     "toktokdata": {
       "command": "npx",
-      "args": ["-y", "@toktokdata/mcp"],
+      "args": ["-y", "@toktokdata.live/mcp"],
       "env": { "TOKTOKDATA_API_KEY": "ttk_live_..." }
     }
   }
 }
 ```
 
-On Windows, if a client cannot start `npx` directly, use `"command": "cmd", "args": ["/c", "npx", "-y", "@toktokdata/mcp"]`.
+On Windows, if a client cannot start `npx` directly, use `"command": "cmd", "args": ["/c", "npx", "-y", "@toktokdata.live/mcp"]`.
 
 Do not commit a config file that contains your key; use the client's secret input or a user-level
 config instead.

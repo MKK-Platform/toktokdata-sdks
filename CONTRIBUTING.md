@@ -6,8 +6,8 @@ Thanks for helping. This repository holds every public client of the toktokdata.
 
 | Folder | What | Check before a pull request |
 |---|---|---|
-| `js/` | `@toktokdata/sdk` (TypeScript) | `npm ci && npm run build --workspaces && npm run typecheck --workspaces && npm test --workspaces` (repo root) |
-| `mcp/` | `@toktokdata/mcp` (MCP server, uses `js/`) | same as above |
+| `js/` | `@toktokdata.live/sdk` (TypeScript) | `npm ci && npm run build --workspaces && npm run typecheck --workspaces && npm test --workspaces` (repo root) |
+| `mcp/` | `@toktokdata.live/mcp` (MCP server, uses `js/`) | same as above |
 | `python/` | `toktokdata` (Python) | `pip install -e ".[dev]" && ruff check . && mypy --strict src && pytest` (in `python/`) |
 | `go/` | `github.com/MKK-Platform/toktokdata-sdks/go` | `gofmt -l . && go vet ./... && go test ./...` (in `go/`) |
 | `examples/` | Samples per language | run the sample you changed |

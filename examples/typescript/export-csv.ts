@@ -2,7 +2,7 @@
 // Usage: npx tsx export-csv.ts [REGION] [BOARD] [OUT_FILE]     e.g. npx tsx export-csv.ts VN daily
 // Scope: export
 import { writeFile } from 'node:fs/promises';
-import { TokTokData } from '@toktokdata/sdk';
+import { TokTokData } from '@toktokdata.live/sdk';
 import { exitWithError } from './common.js';
 
 interface ExportJob {

@@ -8,7 +8,7 @@ them contains a key, and none should: never commit or paste one.
 | Folder | Uses | Covers |
 |---|---|---|
 | [`curl/`](curl/) | curl (+ jq if present), PowerShell | official board, creator profile with a `202` wait loop, entitlements |
-| [`typescript/`](typescript/) | `@toktokdata/sdk` | leaderboard, creator report (profile + analysis + LIVE sessions via the paging iterator), CSV export, webhook receiver |
+| [`typescript/`](typescript/) | `@toktokdata.live/sdk` | leaderboard, creator report (profile + analysis + LIVE sessions via the paging iterator), CSV export, webhook receiver |
 | [`python/`](python/) | `toktokdata` | same four scripts as TypeScript |
 | [`go/`](go/) | `github.com/MKK-Platform/toktokdata-sdks/go` | same four commands as TypeScript |
 | [`java/`](java/) | plain `java.net.http` + Jackson | leaderboard, creator with `202` retry, cursor paging over LIVE sessions, error envelope (`429`, `402`), webhook signature check |

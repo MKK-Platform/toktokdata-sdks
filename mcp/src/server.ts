@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import { DEFAULT_BASE_URL, PendingTimeoutError, TokTokData, TokTokDataError } from "@toktokdata/sdk";
+import { DEFAULT_BASE_URL, PendingTimeoutError, TokTokData, TokTokDataError } from "@toktokdata.live/sdk";
 import { TOOLS, describeTool, type ToolDef } from "./tools.js";
 import { VERSION } from "./version.js";
 

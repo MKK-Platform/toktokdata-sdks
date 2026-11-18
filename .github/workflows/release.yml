@@ -1,8 +1,8 @@
 name: Release
 
 # Publishes one package per tag:
-#   js-v0.1.0      -> npm @toktokdata/sdk     (needs secret NPM_TOKEN)
-#   mcp-v0.1.0     -> npm @toktokdata/mcp     (needs secret NPM_TOKEN)
+#   js-v0.1.0      -> npm @toktokdata.live/sdk     (needs secret NPM_TOKEN)
+#   mcp-v0.1.0     -> npm @toktokdata.live/mcp     (needs secret NPM_TOKEN)
 #   python-v0.1.0  -> PyPI toktokdata         (PyPI trusted publisher for this workflow)
 #   go/v0.1.0      -> nothing to upload: the Go proxy serves the tag itself
 on:

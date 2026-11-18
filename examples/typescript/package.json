@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@toktokdata/sdk": "file:../../js"
+    "@toktokdata.live/sdk": "file:../../js"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

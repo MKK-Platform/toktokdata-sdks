@@ -1,4 +1,4 @@
-# @toktokdata/sdk
+# @toktokdata.live/sdk
 
 Official JavaScript / TypeScript client for the [toktokdata.live](https://toktokdata.live) API:
 official TikTok LIVE rankings, creators, recorded LIVE sessions, gifts, gifters, agencies, trends,
@@ -15,7 +15,7 @@ alerts and exports.
 ## Install
 
 ```bash
-npm install @toktokdata/sdk
+npm install @toktokdata.live/sdk
 ```
 
 ## Quickstart
@@ -23,7 +23,7 @@ npm install @toktokdata/sdk
 Create a key in the dashboard (**Settings → API keys**). Keys look like `ttk_live_<id>_<secret>`.
 
 ```ts
-import { TokTokData } from "@toktokdata/sdk";
+import { TokTokData } from "@toktokdata.live/sdk";
 
 const client = new TokTokData(); // reads TOKTOKDATA_API_KEY from the environment
 
@@ -36,7 +36,7 @@ if (data.board.publishable) {
 console.log(provenance.sourceKind, provenance.observedAt);
 ```
 
-CommonJS works too: `const { TokTokData } = require("@toktokdata/sdk");`
+CommonJS works too: `const { TokTokData } = require("@toktokdata.live/sdk");`
 
 ### Options
 
@@ -189,7 +189,7 @@ Helpers: `isUnauthorized` (401), `isPaymentRequired` (402), `isForbidden` (403),
 `isRateLimited` (429).
 
 ```ts
-import { TokTokDataError } from "@toktokdata/sdk";
+import { TokTokDataError } from "@toktokdata.live/sdk";
 
 try {
   await client.gifters.list();
@@ -224,7 +224,7 @@ arrives, up to `pendingTimeoutMs` (180 s), then throw `PendingTimeoutError` (a `
 `jobId`, `pendingStatus` and `retryAfterSeconds`). A 202 is never billed beyond a cached read.
 
 ```ts
-import { isPending } from "@toktokdata/sdk";
+import { isPending } from "@toktokdata.live/sdk";
 
 const profile = await client.creators.get("new.creator", { maxWaitMs: 30_000 }); // shorter budget
 const maybe = await client.creators.get("new.creator", { wait: false });        // opt out
@@ -267,7 +267,7 @@ Alert webhooks carry `x-toktokdata-signature: sha256=<hex>` (HMAC-SHA256 of
 
 ```ts
 import express from "express";
-import { verifyWebhook, WebhookVerificationError } from "@toktokdata/sdk/webhooks";
+import { verifyWebhook, WebhookVerificationError } from "@toktokdata.live/sdk/webhooks";
 
 app.post("/hooks/toktokdata", express.raw({ type: "application/json" }), (req, res) => {
   try {
@@ -283,7 +283,7 @@ app.post("/hooks/toktokdata", express.raw({ type: "application/json" }), (req, r
 
 Timestamps more than 300 s from now are rejected (`{ toleranceSeconds }` to change). Error codes:
 `webhook_missing_header`, `webhook_invalid_timestamp`, `webhook_timestamp_expired`,
-`webhook_invalid_signature`, `webhook_invalid_json`. `@toktokdata/sdk/webhooks` uses `node:crypto`
+`webhook_invalid_signature`, `webhook_invalid_json`. `@toktokdata.live/sdk/webhooks` uses `node:crypto`
 (Node, Bun, Deno); the main entry has no Node imports.
 
 ## License

@@ -1,5 +1,5 @@
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { DEFAULT_BASE_URL } from "@toktokdata/sdk";
+import { DEFAULT_BASE_URL } from "@toktokdata.live/sdk";
 import { DEFAULT_MAX_WAIT_SECONDS, createServer } from "./server.js";
 import { TOOLS } from "./tools.js";
 import { VERSION } from "./version.js";

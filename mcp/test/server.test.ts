@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
-import { TokTokData, type FetchLike } from "@toktokdata/sdk";
+import { TokTokData, type FetchLike } from "@toktokdata.live/sdk";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { z } from "zod";
 import { TOOLS, createServer, type ServerOptions } from "../src/index.js";

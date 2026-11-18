@@ -1,7 +1,7 @@
 // Top 10 of an official TikTok LIVE board for one region.
 // Usage: npx tsx leaderboard.ts [REGION] [BOARD]     e.g. npx tsx leaderboard.ts VN hourly
 // Scope: rank:read
-import { TokTokData } from '@toktokdata/sdk';
+import { TokTokData } from '@toktokdata.live/sdk';
 import { exitWithError } from './common.js';
 
 interface Entry {

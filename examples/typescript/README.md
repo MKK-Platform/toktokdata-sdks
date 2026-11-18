@@ -1,11 +1,11 @@
-# TypeScript examples (`@toktokdata/sdk`)
+# TypeScript examples (`@toktokdata.live/sdk`)
 
 | Script | What it does | Scopes |
 |---|---|---|
 | `leaderboard.ts` | Top 10 of an official board (`hourly` by default) for a region, plus the rate-limit headers of the call | `rank:read` |
 | `creator-report.ts` | Profile (waits through `202` while the creator is being looked up), content analysis, and up to 30 recent LIVE sessions read with the paging iterator | `creator:read`, `live:read` |
 | `export-csv.ts` | Creates a `rankings` CSV export, waits until it is ready, downloads it to a file | `export` |
-| `webhook-server.ts` | `node:http` server that verifies alert webhook signatures with `verifyWebhook` (from `@toktokdata/sdk/webhooks`, Node only) and prints each alert | none (the alert rule needs `webhook:manage`) |
+| `webhook-server.ts` | `node:http` server that verifies alert webhook signatures with `verifyWebhook` (from `@toktokdata.live/sdk/webhooks`, Node only) and prints each alert | none (the alert rule needs `webhook:manage`) |
 
 ## Setup
 
@@ -17,9 +17,9 @@ npm install
 export TOKTOKDATA_API_KEY=ttk_live_...   # Settings -> API keys at https://toktokdata.live
 ```
 
-`package.json` points `@toktokdata/sdk` at the SDK source in this repo (`file:../../js`; build it
+`package.json` points `@toktokdata.live/sdk` at the SDK source in this repo (`file:../../js`; build it
 first with `npm install && npm run build` in `js/`). Once the SDK is on npm, switch the dependency to
-`"@toktokdata/sdk": "^0.1.0"`.
+`"@toktokdata.live/sdk": "^0.1.0"`.
 
 ## Run
 

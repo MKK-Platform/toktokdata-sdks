@@ -1,5 +1,5 @@
 {
-  "name": "@toktokdata/mcp",
+  "name": "@toktokdata.live/mcp",
   "version": "0.1.0",
   "description": "Local MCP server for the toktokdata.live API: TikTok LIVE rankings, creators, sessions and more as read-only tools for Claude, Cursor, VS Code and other MCP clients.",
   "license": "MIT",
@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
-    "@toktokdata/sdk": "^0.1.0",
+    "@toktokdata.live/sdk": "^0.1.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {

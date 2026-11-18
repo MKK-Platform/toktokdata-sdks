@@ -1,4 +1,4 @@
-import type { TokTokData } from "@toktokdata/sdk";
+import type { TokTokData } from "@toktokdata.live/sdk";
 import { z } from "zod";
 
 export type Credits = "cached-read" | "free";

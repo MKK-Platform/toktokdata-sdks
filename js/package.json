@@ -1,5 +1,5 @@
 {
-  "name": "@toktokdata/sdk",
+  "name": "@toktokdata.live/sdk",
   "version": "0.1.0",
   "description": "Official JavaScript/TypeScript client for the toktokdata.live API (TikTok LIVE rankings, creators, sessions, alerts, exports).",
   "license": "MIT",

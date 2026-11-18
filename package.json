@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces",
-    "test": "npm run build -w @toktokdata/sdk && npm test --workspaces",
-    "typecheck": "npm run build -w @toktokdata/sdk && npm run typecheck --workspaces"
+    "test": "npm run build -w @toktokdata.live/sdk && npm test --workspaces",
+    "typecheck": "npm run build -w @toktokdata.live/sdk && npm run typecheck --workspaces"
   },
   "engines": {
     "node": ">=20"

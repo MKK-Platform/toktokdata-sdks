@@ -8,10 +8,10 @@ that is still being collected, pagination and typed errors.
 
 | Package | Install | Folder |
 |---|---|---|
-| TypeScript / JavaScript | `npm install @toktokdata/sdk` | [`js/`](js) |
+| TypeScript / JavaScript | `npm install @toktokdata.live/sdk` | [`js/`](js) |
 | Python | `pip install toktokdata` | [`python/`](python) |
 | Go | `go get github.com/MKK-Platform/toktokdata-sdks/go` | [`go/`](go) |
-| MCP server (Claude, Cursor, VS Code ...) | `npx -y @toktokdata/mcp` | [`mcp/`](mcp) |
+| MCP server (Claude, Cursor, VS Code ...) | `npx -y @toktokdata.live/mcp` | [`mcp/`](mcp) |
 | Samples: cURL, TypeScript, Python, Go, Java, C#, PHP, Ruby | — | [`examples/`](examples) |
 | OpenAPI 3 document | — | [`openapi/openapi.json`](openapi/openapi.json) |
 
@@ -32,7 +32,7 @@ export TOKTOKDATA_API_KEY=ttk_live_...
 **TypeScript**
 
 ```ts
-import { TokTokData } from '@toktokdata/sdk'
+import { TokTokData } from '@toktokdata.live/sdk'
 
 const client = new TokTokData() // reads TOKTOKDATA_API_KEY
 const board = await client.rankings.official('hourly', { region: 'VN' })
@@ -66,14 +66,14 @@ board, err := c.Rankings.Official(ctx, "hourly", &toktokdata.RankingsOfficialPar
   "mcpServers": {
     "toktokdata": {
       "command": "npx",
-      "args": ["-y", "@toktokdata/mcp"],
+      "args": ["-y", "@toktokdata.live/mcp"],
       "env": { "TOKTOKDATA_API_KEY": "ttk_live_..." }
     }
   }
 }
 ```
 
-Claude Code: `claude mcp add toktokdata -e TOKTOKDATA_API_KEY=ttk_live_... -- npx -y @toktokdata/mcp`.
+Claude Code: `claude mcp add toktokdata -e TOKTOKDATA_API_KEY=ttk_live_... -- npx -y @toktokdata.live/mcp`.
 More clients in [`mcp/README.md`](mcp/README.md).
 
 ## What every SDK does for you

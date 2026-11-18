@@ -1,4 +1,4 @@
-import { PendingTimeoutError, TokTokDataError } from '@toktokdata/sdk';
+import { PendingTimeoutError, TokTokDataError } from '@toktokdata.live/sdk';
 
 /** Print an API error the way a user can act on it, then exit non-zero. */
 export function exitWithError(err: unknown): never {

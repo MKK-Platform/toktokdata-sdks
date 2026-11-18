@@ -2,7 +2,7 @@
 // Usage: TOKTOKDATA_WEBHOOK_SECRET=... npx tsx webhook-server.ts [PORT]
 // No API key needed here; creating the alert rule that points at this server needs webhook:manage.
 import { createServer } from 'node:http';
-import { verifyWebhook } from '@toktokdata/sdk/webhooks';
+import { verifyWebhook } from '@toktokdata.live/sdk/webhooks';
 
 interface AlertPayload {
   schemaVersion: string;

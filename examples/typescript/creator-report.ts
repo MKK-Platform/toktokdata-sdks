@@ -1,7 +1,7 @@
 // Creator report: profile, content analysis and recent LIVE sessions.
 // Usage: npx tsx creator-report.ts [HANDLE]     e.g. npx tsx creator-report.ts tiktok
 // Scopes: creator:read (profile, analysis), live:read (sessions)
-import { TokTokData } from '@toktokdata/sdk';
+import { TokTokData } from '@toktokdata.live/sdk';
 import { exitWithError } from './common.js';
 
 interface Profile {
