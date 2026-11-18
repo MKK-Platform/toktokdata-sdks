@@ -102,7 +102,7 @@ class UrllibTransport:
             reason = exc.reason
             is_timeout = isinstance(reason, (socket.timeout, TimeoutError))
             raise TransportError(f"request failed: {reason}", timeout=is_timeout) from exc
-        except (socket.timeout, TimeoutError) as exc:
+        except TimeoutError as exc:
             raise TransportError("request timed out", timeout=True) from exc
         except (http.client.HTTPException, OSError) as exc:
             raise TransportError(f"request failed: {exc}") from exc

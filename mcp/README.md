@@ -16,7 +16,7 @@ with your API key, and never writes anything: no alerts, exports, refreshes or v
 3. Restart the client. The server prints `toktokdata MCP ready: 30 tools, base https://api.toktokdata.live`
    to stderr (the client's MCP log).
 
-Requires Node.js 18 or newer.
+Requires Node.js 20 or newer.
 
 | Variable | |
 |---|---|

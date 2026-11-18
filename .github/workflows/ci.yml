@@ -13,8 +13,9 @@ jobs:
     name: TypeScript SDK + MCP (Node ${{ matrix.node }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node: [18, 20, 22]
+        node: [20, 22, 24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -30,8 +31,9 @@ jobs:
     name: Python SDK (${{ matrix.python }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python: ['3.9', '3.12', '3.13']
+        python: ['3.10', '3.12', '3.13']
     defaults:
       run:
         working-directory: python
@@ -49,6 +51,7 @@ jobs:
     name: Go SDK (${{ matrix.go }})
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         go: ['1.22', 'stable']
     defaults:

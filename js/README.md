@@ -4,7 +4,7 @@ Official JavaScript / TypeScript client for the [toktokdata.live](https://toktok
 official TikTok LIVE rankings, creators, recorded LIVE sessions, gifts, gifters, agencies, trends,
 alerts and exports.
 
-- Zero runtime dependencies, uses the global `fetch` (Node 18+, Deno, Bun, Cloudflare Workers and other edge runtimes).
+- Zero runtime dependencies, uses the global `fetch` (Node 20+, Deno, Bun, Cloudflare Workers and other edge runtimes).
 - ESM and CommonJS builds, TypeScript types included.
 - Retries, `Retry-After`, 202 "still collecting" waiting, cursor pagination and webhook verification built in.
 

@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import datetime as _dt
 from collections.abc import Mapping
-from typing import Any, Union
+from typing import Any
 
 from .._types import DeliveryStatus, JSONDict
 from ._base import Resource, require, seg
 
-Since = Union[str, _dt.datetime]
+Since = str | _dt.datetime
 
 
 class Alerts(Resource):

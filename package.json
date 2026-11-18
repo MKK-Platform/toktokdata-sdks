@@ -13,7 +13,7 @@
     "typecheck": "npm run build -w @toktokdata/sdk && npm run typecheck --workspaces"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "overrides": {
     "vite": "^6.4.1"

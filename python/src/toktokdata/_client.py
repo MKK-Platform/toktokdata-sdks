@@ -5,8 +5,8 @@ import json
 import os
 import random
 import time
-from collections.abc import Iterator, Mapping
-from typing import Any, Callable, cast
+from collections.abc import Callable, Iterator, Mapping
+from typing import Any, cast
 
 from ._errors import PendingTimeoutError, TokTokDataError, error_from_response, parse_retry_after
 from ._transport import Transport, TransportError, TransportResponse, UrllibTransport

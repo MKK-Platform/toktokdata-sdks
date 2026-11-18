@@ -3,7 +3,7 @@
 Official Python client for the [toktokdata.live](https://toktokdata.live) API: TikTok LIVE
 rankings, creators, gifters, agencies, LIVE sessions, trends, alerts and exports.
 
-- Python 3.9+, **no runtime dependencies** (standard library `urllib` only), fully typed (`py.typed`).
+- Python 3.10+, **no runtime dependencies** (standard library `urllib` only), fully typed (`py.typed`).
 - Auth, retries with `Retry-After`, waiting for data that is still being collected (`202`),
   cursor pagination, typed errors, rate-limit info and a webhook signature helper.
 
