@@ -1,8 +1,9 @@
 name: CI
 
-# Runs on demand while the repository is private (Actions minutes are shared with the
-# org); switch on `pull_request` and `push` once the repository is public.
 on:
+  push:
+    branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
